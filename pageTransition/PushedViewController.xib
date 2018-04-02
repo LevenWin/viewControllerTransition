@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushedViewController">
+            <connections>
+                <outlet property="imageView" destination="huq-tg-JcZ" id="AMJ-Mn-utE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="608"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transition.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="huq-tg-JcZ">
+                    <rect key="frame" x="0.0" y="64" width="323" height="250"/>
+                    <color key="backgroundColor" red="0.87238579859999998" green="0.88102328169999999" blue="0.88102328169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="6WM-45-FQR"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-Aq-Srw">
+                    <rect key="frame" x="61.5" y="354" width="200" height="33"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="898-4r-7of"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Pop">
+                        <color key="titleColor" red="0.96744130709999998" green="0.96744130709999998" blue="0.96744130709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="popClick:" destination="-1" eventType="touchUpInside" id="Rkb-a8-k3q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NB-ee-hJ8">
+                    <rect key="frame" x="61" y="407" width="200" height="33"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="osy-4H-7AD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Push">
+                        <color key="titleColor" red="0.96744130709999998" green="0.96744130709999998" blue="0.96744130709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pushClick:" destination="-1" eventType="touchUpInside" id="nkV-wz-4W5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="top" secondItem="huq-tg-JcZ" secondAttribute="top" id="0PK-bv-r6o"/>
+                <constraint firstItem="3NB-ee-hJ8" firstAttribute="top" secondItem="QVB-Aq-Srw" secondAttribute="bottom" constant="20" id="94z-oz-NUj"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="huq-tg-JcZ" secondAttribute="trailing" id="U58-ys-rGC"/>
+                <constraint firstItem="huq-tg-JcZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ZeX-c7-4CO"/>
+                <constraint firstItem="QVB-Aq-Srw" firstAttribute="top" secondItem="huq-tg-JcZ" secondAttribute="bottom" constant="40" id="dWc-l6-9Xk"/>
+                <constraint firstItem="3NB-ee-hJ8" firstAttribute="centerX" secondItem="QVB-Aq-Srw" secondAttribute="centerX" id="wrO-Ql-C27"/>
+                <constraint firstItem="QVB-Aq-Srw" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="yNJ-vZ-0OP"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="40.5" y="83"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="transition.jpg" width="500" height="333"/>
+    </resources>
+</document>
